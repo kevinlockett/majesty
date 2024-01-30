@@ -1,28 +1,5 @@
-const queens = []
-const tributeChest = []
-
-const createQueen = (queenId, queenName) => {
-    const queenObject = {
-        id: queenId,
-        name: queenName
-    }
-
-    queens.push(queenObject)
-}
-
-const hailTheQueen = (queenName) => {
-    return `Hail Her Majesty, ${queenName}.`  // This function returns a string
-}
-
-const payTribute = (tributeId, tributeDescription, queenId) => {
-    const tributeObject = {
-        id: tributeId,
-        description: tributeDescription,
-        queenId: queenId
-    }
-
-    tributeChest.push(tributeObject)
-}
+const { queens, tributeChest } = require("./data.js")
+const { createQueen, hailTheQueen, payTribute } = require("./functions.js")
 
 // Create some queens
 createQueen(1, "Peggy Lockett")
