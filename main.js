@@ -25,10 +25,7 @@ payTribute(6, "a castle on Nottingham", 1)
 // Iterate the queen objects to show tribute for each one
 for (const queen of database.queens) {
     
-    // Each queen will look at each item to see if it is hers
-    for (const tribute of database.tributeChest) {
-        if (tribute.queenId === queen.id) {
-            console.log(`Queen ${queen.name} has received her tribute, ${tribute.description} with great joy.`)
-        }
-    }
+    const foundTribute = database.tributeChest.find((tribute) => tribute.queenId === queen.id)
+
+    console.log(`Queen ${queen.name} has received her tribute, ${foundTribute.description} with great joy.`)
 }
