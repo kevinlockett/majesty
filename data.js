@@ -1,4 +1,6 @@
-const queens = []
-const tributeChest = []
+const database = {
+    queens: [],
+    tributeChest: []
+}
 
-module.exports = { queens, tributeChest }
+module.exports = { database }

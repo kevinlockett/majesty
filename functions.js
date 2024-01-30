@@ -1,4 +1,4 @@
-const { queens, tributeChest } = require("./data.js")
+const { database } = require("./data.js")
 
 const createQueen = (queenId, queenName) => {
     const queenObject = {
@@ -6,7 +6,7 @@ const createQueen = (queenId, queenName) => {
         name: queenName
     }
 
-    queens.push(queenObject)
+    database.queens.push(queenObject)
 }
 
 const hailTheQueen = (queenName) => {
@@ -20,7 +20,7 @@ const payTribute = (tributeId, tributeDescription, queenId) => {
         queenId: queenId
     }
 
-    tributeChest.push(tributeObject)
+    database.tributeChest.push(tributeObject)
 }
 
 module.exports = { createQueen, hailTheQueen, payTribute }

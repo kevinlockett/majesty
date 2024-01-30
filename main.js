@@ -1,4 +1,4 @@
-const { queens, tributeChest } = require("./data.js")
+const { database } = require("./data.js")
 const { createQueen, hailTheQueen, payTribute } = require("./functions.js")
 
 // Create some queens
@@ -9,7 +9,7 @@ createQueen(4, "Elizabeth Joy Kaiser")
 createQueen(5, "Kaitlyn Lockett")
 
 // Hail all of the queens
-for (const queen of queens) {
+for (const queen of database.queens) {
     const hailMessage = hailTheQueen(queen.name)
     console.log(hailMessage)
 }
@@ -23,10 +23,10 @@ payTribute(5, "2 wheels of sharp cheddar cheese", 5)
 payTribute(6, "a castle on Nottingham", 1)
 
 // Iterate the queen objects to show tribute for each one
-for (const queen of queens) {
+for (const queen of database.queens) {
     
     // Each queen will look at each item to see if it is hers
-    for (const tribute of tributeChest) {
+    for (const tribute of database.tributeChest) {
         if (tribute.queenId === queen.id) {
             console.log(`Queen ${queen.name} has received her tribute, ${tribute.description} with great joy.`)
         }
